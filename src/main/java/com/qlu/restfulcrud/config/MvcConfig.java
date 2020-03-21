@@ -27,6 +27,7 @@ public class MvcConfig implements WebMvcConfigurer{
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+        //视图映射
         registry.addViewController("/tomorrow").setViewName("success");
         registry.addViewController("/").setViewName("login");
         registry.addViewController("/main.html").setViewName("dashboard");
@@ -43,5 +44,6 @@ public class MvcConfig implements WebMvcConfigurer{
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
                 .excludePathPatterns("/index.html","/","/user/login","/webjars/**","/asserts/**");
     }
+
 
 }

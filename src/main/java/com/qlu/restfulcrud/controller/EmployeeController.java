@@ -61,7 +61,7 @@ public class EmployeeController {
     }
     //员工修改。需要修改员工的id
     @PutMapping("/emp")
-    public String updateEmployee(Employee employee){
+    public String updateEmployee(Employee employee){//携带了员工数据
         System.out.println("员工数据"+employee);
         employeeDao.save(employee);
         return "redirect:/emps";
